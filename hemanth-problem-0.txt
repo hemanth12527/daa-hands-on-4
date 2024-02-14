@@ -1,0 +1,17 @@
+def fib(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    
+    fib_0 = 0
+    fib_1 = 1
+    for _ in range(2, n + 1):
+        fib_2 = fib_0 + fib_1
+        fib_0 = fib_1
+        fib_1 = fib_2
+    return fib_1
+
+n = int(input("Enter any value to calculate Fibonacci sequence(n): "))
+result = fib(n)
+print(f"Fibonacci({n}): {result}")

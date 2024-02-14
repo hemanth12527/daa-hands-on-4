@@ -1,0 +1,18 @@
+def remove_duplicates(array):
+    if not array:
+        return []
+
+    unique_set = set()
+    unique_array = []
+
+    for element in array:
+        if element not in unique_set:
+            unique_set.add(element)
+            unique_array.append(element)
+
+    return unique_array
+
+# Example usage
+input_array = [2, 2, 2, 2, 2]
+output_array = remove_duplicates(input_array)
+print("Output:",output_array)
